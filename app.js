@@ -150,7 +150,7 @@ App.prototype.fishing = function (cb) {
             });
         },
         function (callback) {
-            self._game_model.rank(function (err, result) {
+            self._game_model.setRank(function (err, result) {
                 if (err) {
                     callback(err);
                 } else {

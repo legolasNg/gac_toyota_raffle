@@ -204,8 +204,8 @@ Game.prototype.clickStart = function (cb) {
     });
 }
 
-// 获取排行
-Game.prototype.rank = function (cb) {
+// 设置排行
+Game.prototype.setRank = function (cb) {
     let data = {};
     let name = this._user_info.dealer_name;
     for (let i = 0; i < name.length; i++) {
