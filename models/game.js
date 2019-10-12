@@ -245,7 +245,8 @@ Game.prototype.tryLottery = function (cb) {
 
 // 获取验证码
 Game.prototype.getSmsCode = function (cb) {
-    if (!_.isString(this._user_info.phone) || !this._user_info.phone.length) {
+    let reg = new RegExp(/\d{11}/);
+    if (!_.isString(this._user_info.phone) || !this._user_info.phone.length || !reg.test(this._user_info.phone)) {
         throw Error("invalid phone");
     }
 
@@ -263,7 +264,8 @@ Game.prototype.getSmsCode = function (cb) {
 
 // 登陆校验
 Game.prototype.checkLogin = function (smsCode, cb) {
-    if (!_.isString(this._user_info.phone) || !this._user_info.phone.length) {
+    let reg = new RegExp(/\d{11}/);
+    if (!_.isString(this._user_info.phone) || !this._user_info.phone.length || !reg.test(this._user_info.phone)) {
         throw Error("invalid phone");
     }
     if (!_.isString(smsCode) || !smsCode.length) {
@@ -285,7 +287,8 @@ Game.prototype.checkLogin = function (smsCode, cb) {
 
 // 登陆
 Game.prototype.login = function (smsCode, cb) {
-    if (!_.isString(this._user_info.phone) || !this._user_info.phone.length) {
+    let reg = new RegExp(/\d{11}/);
+    if (!_.isString(this._user_info.phone) || !this._user_info.phone.length || !reg.test(this._user_info.phone)) {
         throw Error("invalid phone");
     }
     if (!_.isString(smsCode) || !smsCode.length) {
