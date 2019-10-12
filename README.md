@@ -14,21 +14,25 @@
 
 ## 程序依赖
 
-先安装`node`和`npm`，然后使用`npm`安装`package.json`中的依赖
+先安装`node`和`npm`，然后使用`npm`安装`package.json`中的依赖:
 
 ```shell
+git clone https://github.com/legolasNg/gac_toyota_raffle.git
+
+cd gac_toyota_raffle
+
 npm install
 ```
 
 ## 操作流程
 
-- 1.查看`/resource`目录下的城市编号、汽车编号和销售点编号
+- 1.查看`/resource`目录下的城市编号、汽车编号和销售点编号。
 
-- 2.根据上一步的信息，配置`/settings.js`中的个人信息( **如果已经注册过，则只需要填写手机号码** )
+- 2.根据上一步的信息，配置`/settings.js`中的个人信息( **如果已经注册过，则只需要填写手机号码** )。
 
-- 3.运行程序`node app.js`
+- 3.运行程序`node app.js`。
 
-- 4.程序运行之后，会向手机发送短信( 如果登陆尝试过于频繁后报错，请在2分钟后再重试 )，根据短信填写验证码，按回车键继续
+- 4.程序运行之后，会向手机发送短信( 如果登陆尝试过于频繁后报错，请在2分钟后再重试 )，根据短信填写验证码，按回车键继续。
 
 ## 声明
 
